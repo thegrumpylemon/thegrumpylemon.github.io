@@ -7,15 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Grumpy Lemon</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-
+        /* Global body styles */
         body {
             background-color: #754B3E;
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
             color: #FFFFFF;
+            margin: 0;
+            padding: 0;
         }
 
+        /* Title style */
         .dancing-script-title {
             font-family: "Dancing Script", cursive;
             font-optical-sizing: auto;
@@ -23,37 +25,149 @@
             font-style: normal;
         }
 
+        /* Header styles */
         h1 {
             color: #FFFFFF;
             text-align: center;
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+
+        /* Logo styles */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Play Store & App Store buttons */
+        .store-buttons img {
+            width: 150px;
+            height: auto;
+            margin: 0.5rem;
+        }
+
+        /* Contact section */
+        p {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Responsive styling for tablets and small screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            /* Adjust logo size on smaller screens */
+            img[src="logo.png"] {
+                max-width: 200px;
+            }
+
+            /* Adjust image for game release */
+            img[src="cinnamons-crossword.png"] {
+                max-width: 90%;
+            }
+
+            /* Button sizes for mobile */
+            .store-buttons img {
+                width: 120px;
+            }
+
+            /* Email contact text */
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Further adjustments for very small screens (e.g., phones) */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem;
+            }
+
+            /* Adjust the logo and game release image further for very small screens */
+            img[src="logo.png"] {
+                max-width: 180px;
+            }
+
+            img[src="cinnamons-crossword.png"] {
+                max-width: 85%;
+            }
+
+            /* Reduce button sizes even more for very small screens */
+            .store-buttons img {
+                width: 100px;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Styling for large desktop screens */
+        @media (min-width: 1200px) {
+            body {
+                font-size: 0.9rem;
+                /* Smaller base font size for large screens */
+            }
+
+            h1 {
+                font-size: 2rem;
+                /* Slightly larger title for desktops */
+            }
+
+            /* Limit the width of the content */
+            .content-wrapper {
+                max-width: 1200px;
+                margin: 0 auto;
+                /* Center the content */
+                padding: 20px;
+            }
+
+            /* Logo size for large screens */
+            img[src="logo.png"] {
+                max-width: 250px;
+            }
+
+            /* Game release image size */
+            img[src="cinnamons-crossword.png"] {
+                max-width: 45%;
+            }
+
+            /* Adjust the button sizes for larger screens */
+            .store-buttons img {
+                width: 160px;
+            }
+
+            /* Contact text adjustment */
+            p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <img src="logo.png" alt="The Grumpy Lemon Logo" style="max-width: 250px; height: auto;">
+    <div class="content-wrapper">
+        <img src="logo.png" alt="The Grumpy Lemon Logo">
 
-    <br><br>
+        <br><br><br>
 
-    <h1>Latest Game Release</h1>
+        <h1>Latest Game Release</h1>
 
-    <img src="cinnamons-crossword.png" alt="Cinnamons Crossword" style="max-width: 500px; height: auto;">
+        <img src="cinnamons-crossword.png" alt="Cinnamons Crossword">
 
-    <p>
-        <a href="https://play.google.com/store/apps/details?id=com.grumpylemonmedia.cinnamons"><img
-                src="button-play-store.png" alt="Download on the Google Play Store"
-                style="width: 200px; height: auto;"></a>
-        <a href="https://apps.apple.com/ie/app/cinnamons-crossword/id6502964035 "><img src="button-app-store.png"
-                alt="Download on the Google Play Store" style="width: 200px; height: auto;"></a>
-    </p>
+        <p class="store-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.grumpylemonmedia.cinnamons"><img
+                    src="button-play-store.png" alt="Download on the Google Play Store"></a>
+            <a href="https://apps.apple.com/ie/app/cinnamons-crossword/id6502964035"><img src="button-app-store.png"
+                    alt="Download on the App Store"></a>
+        </p>
 
-    <p>
-        <strong>Get In Touch:</strong> grumpylemonmedia@gmail.com
-    </p>
-    <p>
-
-    </p>
-
+        <p>
+            <strong>Get In Touch:</strong> grumpylemonmedia@gmail.com
+        </p>
+    </div>
 </body>
 
 </html>
